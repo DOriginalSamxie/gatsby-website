@@ -1,21 +1,16 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import * as React from 'react'
+import { Link } from 'gatsby'
+import Layout from '../components/layout'
+// import { graphql } from 'gatsby'
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
     <>
-      <h1>Hello, world</h1>
-      <p>This page was built on {data.site.buildTime}</p>
+      <Layout pageTitle='Home' pageHeading='Site'>
+        Welcome to my cool website page
+      </Layout>
     </>
   )
 }
 
 export default IndexPage
-
-export const query = graphql`
-  query {
-    site {
-      buildTime
-    }
-  }
-`
